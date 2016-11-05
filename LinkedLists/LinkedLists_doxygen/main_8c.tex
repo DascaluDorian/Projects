@@ -1,0 +1,138 @@
+\hypertarget{main_8c}{}\section{C\+:/\+Users/\+Dori-\/\+P\+C/\+Desktop/\+Linked\+Lists/main.c File Reference}
+\label{main_8c}\index{C\+:/\+Users/\+Dori-\/\+P\+C/\+Desktop/\+Linked\+Lists/main.\+c@{C\+:/\+Users/\+Dori-\/\+P\+C/\+Desktop/\+Linked\+Lists/main.\+c}}
+
+
+Libraries 2. \+: A library for linked lists.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}singly\+\_\+functions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doubly\+\_\+functions.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_singly}{Singly}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_singly}{Singly} type of linked list. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_doubly}{Doubly}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_doubly}{Doubly} type of linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8c_a8ea01e0869b8d3357ac98cdc9b1a0a25}{singly\+\_\+test} (F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em Test generator for singly type structure. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a096787aab4a30b4635b137893b90937c}{doubly\+\_\+test} (F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em Test generator for doubly type structure. \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Libraries 2. \+: A library for linked lists. 
+
+
+
+\subsection{Function Documentation}
+\index{main.\+c@{main.\+c}!doubly\+\_\+test@{doubly\+\_\+test}}
+\index{doubly\+\_\+test@{doubly\+\_\+test}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{doubly\+\_\+test(\+F\+I\+L\+E $\ast$f)}{doubly_test(FILE *f)}}]{\setlength{\rightskip}{0pt plus 5cm}void doubly\+\_\+test (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a096787aab4a30b4635b137893b90937c}{}\label{main_8c_a096787aab4a30b4635b137893b90937c}
+
+
+Test generator for doubly type structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$f} & pointer to the file for output results. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The test results. 
+\end{DoxyReturn}
+length \+: a variable for length of list, default at 2000 elements.~\newline
+
+
+val \+: a variable to enter values in list.~\newline
+
+
+pos \+: a variable for positions in lists.~\newline
+
+
+Create two lists using doubly\+\_\+push\+\_\+last and doubly\+\_\+push\+\_\+first functions with length value of \char`\"{}length\char`\"{}.~\newline
+
+
+Print the initial list and the list after we delete the element.~\newline
+Print the element from position \char`\"{}pos\char`\"{} (generated with C random function), before and after we delete the element.
+
+Add the a new element \char`\"{}val\char`\"{} on position \char`\"{}pos\char`\"{}, both generated with C random function.~\newline
+Print the element from position \char`\"{}pos\char`\"{}.
+
+Print the length of the list and the list.~\newline
+
+
+Append the two list, print the result and lengh of appended lists.~\newline
+ \index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Main function. 
+
+Function call tests generator for singly and doubly linked lists giving tests with operation imported from \char`\"{}singly\+\_\+functions.\+h\char`\"{} and \char`\"{}doubly\+\_\+functions.\+h\char`\"{}.~\newline
+ Opens a text file for writing in appending mode. If it does not exist, then a new file is created. The program will start appending content in the existing file content.~\newline
+
+
+Intializes random number generator.~\newline
+
+
+Uses the singly\+\_\+test and doubly\+\_\+test, tests generator function.~\newline
+ \index{main.\+c@{main.\+c}!singly\+\_\+test@{singly\+\_\+test}}
+\index{singly\+\_\+test@{singly\+\_\+test}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{singly\+\_\+test(\+F\+I\+L\+E $\ast$f)}{singly_test(FILE *f)}}]{\setlength{\rightskip}{0pt plus 5cm}void singly\+\_\+test (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a8ea01e0869b8d3357ac98cdc9b1a0a25}{}\label{main_8c_a8ea01e0869b8d3357ac98cdc9b1a0a25}
+
+
+Test generator for singly type structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$f} & pointer to the file for output results. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The test results. 
+\end{DoxyReturn}
+length \+: a variable for length of list, default at 2000 elements.~\newline
+
+
+val \+: a variable to enter values in list.~\newline
+
+
+pos \+: a variable for positions in lists.~\newline
+
+
+Create two lists using singly\+\_\+push\+\_\+last and singly\+\_\+push\+\_\+first functions with length value of \char`\"{}length\char`\"{}.~\newline
+
+
+Print the initial list and the list after we delete the element.~\newline
+Print the element from position \char`\"{}pos\char`\"{} (generated with C random function), before and after we delete the element.
+
+Add the a new element \char`\"{}val\char`\"{} on position \char`\"{}pos\char`\"{}, both generated with C random function.~\newline
+Print the element from position \char`\"{}pos\char`\"{}.
+
+Print the length of the list and the list.~\newline
+
+
+Append the two list, print the result and lengh of appended lists.~\newline
+ 

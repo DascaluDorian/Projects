@@ -1,0 +1,212 @@
+\section{Test generator for linked lists}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+\begin{algorithm}
+\begin{algorithmic}[1]
+\Function{}{}
+\State {Initialize the \textit{length}}
+\State {Initialize the \textit{val}}
+\State {Initialize the \textit{pos}}
+\State {Create and allocate memory for \textit{head\_first} using \textit{init\_emptylist} function}
+\State {Create and allocate memory for \textit{head\_second} using \textit{init\_emptylist} function}
+\For {$\textit{{$\textit{i}\gets\textit{1}$}}\textit{,}\textit{length}$}
+\State{$\textit{val}\gets\textit{random}$}
+\State{Push last \textit{val} in \textit{head\_first} using \textit{push\_last} function}
+\State{$\textit{val}\gets\textit{random}$}
+\State{Push first \textit{val} in \textit{head\_second} using \textit{push\_first} function}
+\EndFor
+\State{$\textit{pos}\gets\textit{random}$}
+\State{Print initial list using \textit{print\_list} function}
+\State{Delete the element from position \textit{pos} using \textit{delete\_pos} function}
+\State{Print the new element from position \textit{pos} using \textit{pop\_pos} funciton}
+\State{Print list using \textit{print\_list} function}
+\BState{}
+\State{$\textit{val}\gets\textit{random}$}
+\State{$\textit{pos}\gets\textit{random}$}
+\State{Insert \textit{val} on position \textit{pos} using \textit{push\_pos} function}
+\State{Print the new element from position \textit{pos} using \textit{pop\_pos} function}
+\BState
+\State{Print the length of list using \textit{length\_list}}
+\State{Print list using \textit{print\_list} function}
+\BState
+\State{Append the two list using \textit{append\_lists}}
+\State{Print the appended lists using \textit{print\_list} function}
+\State{Print the length of appended lists using \textit{appended\_lists} function}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\vspace*{3cm}
+
+\section{Print a list}
+\makeatletter
+\makeatother
+\begin{algorithm}
+\begin{algorithmic}[1]
+\Function{}{}
+\If {\textit{head->next} != \textit{NULL}} 
+\State {Create and allocate memory for \textit{current} node}
+\State {$\textit{current} \gets \textit{head}$}
+\State \Do \State {$\textit{current}\gets\textit{current->next}$} \State {Print \textit{current->data}}
+\doWhile {\textit{current->next} != \textit{NULL}}
+\Else \State {Print "The list is empty"}
+\EndIf
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\section{Return an element from a given position}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+\begin{algorithm}
+\begin{algorithmic}[1]
+\Function{}{}
+\State {Create and allocate memory for \textit{current} node}
+\State {$\textit{current} \gets \textit{head}$}
+\State {Initialize the \textit{iterator} with 0}
+\While {\textit{iterator} < \textit{position}}
+\State {$\textit{current}\gets\textit{current->next}$}
+\State {$\textit{iterator}\gets\textit{iterator + 1}$}
+\EndWhile
+\BState
+\Return {\textit{current->data}}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\section{Return a pointer of linked list}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+\begin{algorithm}
+\begin{algorithmic}[1]
+\Function{}{}
+\State{Creates and allocates memory for the head of list}
+\State{$\textit{head->data}\gets\textit{NULL}$}
+\State{$\textit{head->next}\gets\textit{NULL}$}
+\State[2]{ $\textit{head->prev}\gets\textit{NULL}$}
+\BState
+\Return{\textit{head}}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\vspace*{5cm}
+
+\section{Add a new element on the first position of list}
+\makeatletter
+\makeatother
+\begin{algorithm}
+\begin{algorithmic}[1]
+\Function{}{}
+\State{Creates and allocates memory for a new node}
+\State{$\textit{new\_element->data}\gets\textit{val}$}
+\State{$\textit{new\_element->next}\gets\textit{head->next}$}
+\State[2]{$\textit{new\_element->prev}\gets\textit{head}$}
+\State{$\textit{head->next}\gets\textit{new\_element}$}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\section{Add a new element on the last position of list}
+\makeatletter
+\makeatother
+\begin{algorithm}
+\begin{algorithmic}[1]
+\Function{}{}
+\State{Creates and allocates memory for a new node}
+\State{Creates and allocates memory for \textit{current} node}
+\State {$\textit{current} \gets \textit{head}$}
+\While{\textit{current->next} != \textit{NULL}}
+\State {$\textit{current}\gets\textit{current->next}$}
+\EndWhile
+\State{$\textit{current->next}\gets\textit{new\_element}$}
+\State{$\textit{new\_element->data}\gets\textit{val}$}
+\State{$\textit{new\_element->next}\gets\textit{NULL}$}
+\State[2]{$\textit{new\_element->prev}\gets\textit{current}$}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\section{Add a new element on the specified position of list}
+\makeatletter
+\makeatother
+\begin{algorithm}
+\begin{algorithmic}[1]
+\Function{}{}
+\State {Create and allocate memory for \textit{current} node}
+\State {Initialize the \textit{iterator} with 0}
+\State {$\textit{current} \gets \textit{head}$}
+\While {\textit{iterator} < \textit{position-1}}
+\State {$\textit{current}\gets\textit{current->next}$}
+\State {$\textit{iterator}\gets\textit{iterator + 1}$}
+\EndWhile
+\State {Create and allocate memory for \textit{added\_element} node}
+\State {$\textit{added\_element->next}\gets\textit{current->next}$}
+\State [2]{$\textit{added\_element->prev}\gets\textit{current}$}
+\State {$\textit{current->next}\gets\textit{added\_element}$}
+\State {$\textit{added\_element->data}\gets\textit{val}$}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\vspace*{3cm}
+
+\section{Delete an element on the specified position of list}
+\makeatletter
+\makeatother
+\begin{algorithm}
+\begin{algorithmic}[1]
+\Function{}{}
+\State {Create and allocate memory for \textit{current} node}
+\State {Create and allocate memory for \textit{deleted} node}
+\State {Initialize the \textit{iterator} with 0}
+\State {$\textit{current} \gets \textit{head}$}
+\While {\textit{iterator} < \textit{position-1}}
+\State {$\textit{current}\gets\textit{current->next}$}
+\State {$\textit{iterator}\gets\textit{iterator + 1}$}
+\EndWhile
+\State {$\textit{deleted\_node}\gets\textit{current->next}$}
+\State {$\textit{current->next}\gets\textit{deleted\_node->next}$}
+\State [2]{$\textit{deleted\_node->next->prev}\gets\textit{current}$}
+\State {free\textit{(deleted\_node)}}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\section{Return the length of list}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+\begin{algorithm}
+\begin{algorithmic}[1]
+\Function{}{}
+\State {Initialize the \textit{length} with 0}
+\State {$\textit{current} \gets \textit{head}$}
+\While {\textit{current->next} != \textit{NULL}}
+\State {$\textit{current}\gets\textit{current->next}$}
+\State {$\textit{length}\gets\textit{length + 1}$}
+\EndWhile
+\BState
+\Return{length}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\section{Append two linked lists}
+\makeatletter
+\makeatother
+\begin{algorithm}
+\begin{algorithmic}[1]
+\Function{}{}
+\State {$\textit{current} \gets \textit{head\_list1}$}
+\While {\textit{current->next} != \textit{NULL}}
+\State {$\textit{current}\gets\textit{current->next}$}
+\EndWhile
+\State {$\textit{current->next}\gets\textit{head\_list2->next}$}
+\State [2]{$\textit{head\_list2->next->prev}\gets\textit{current}$}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}

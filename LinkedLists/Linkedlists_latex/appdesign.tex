@@ -1,0 +1,298 @@
+\section{The high level architectural overview of the application}
+\state{The application should implement operations with singly and doubly linked lists.\\It is divided into four modules :}
+\begin{itemize}
+    \item main.c
+    \item singly\_functions.h
+    \item doubly\_functions.h
+    \item functions.c
+\end{itemize}
+\state{The "main.c" module contain the test generator function. \\The test generator function call functions from "singly\_functions.h" and "doubly\_functions.h", defined in "functions.c".\\ The output is showed in the linked lists output file.}
+
+\section{The specification of the input}
+\state{The aplication doesn't have specification of the input, because it has an independent test generator function.}
+
+\section{The specification of the output}
+\state{The output is represented by the linked lists output file.\\The test generator function use all functions from modules and print the results in linked lists output file.\\ The results is showed in a easy way to understand.}
+
+\section{All the modules and their description}
+\subsection{Main.c}
+\state\hspace*{1cm}{Libraries 2. : A library for linked lists.\\ Represent the main modules in the aplication.}
+\subsection{Singly\_functions.h}
+\state\hspace*{1cm}{C library for operations with singly linked lists.}\\\\
+\state\hspace*{1cm}{Implements operations as initialisation of an empty list, adding a value at the beginning and at the end, inserting an
+item at a specified position, removing an item at a specified position, computing the length of a list and appending
+two lists for singly linked lists.}
+\subsection{Doubly\_functions.h}
+\state\hspace*{1cm}{C library for operations with doubly linked lists.}\\\\
+\state\hspace*{1cm}{Implements operations as initialisation of an empty list, adding a value at the beginning and at the end, inserting an
+item at a specified position, removing an item at a specified position, computing the length of a list and appending
+two lists for doubly linked lists.}
+\subsection{Functions.c}
+\state\hspace*{1cm}{C library implementation for operations with singly and doubly linked lists.}\\\\
+\state\hspace*{1cm}{Implements operations as initialisation of an empty list, adding a value at the beginning and at the end, inserting an
+item at a specified position, removing an item at a specified position, computing the length of a list and appending
+two lists for singly and doubly linked lists.}
+
+
+\section{Data structure documentation}
+\subsection{Doubly struct}
+\subsubsection{Data fields}
+\begin{itemize}
+    \item int data
+    \state{\\\it An integer variable for storage the data in linked list.}
+    \item struct Doubly *next
+    \state{\\\it The link to next element.}
+    \item struct Doubly *prev
+    \state{\\\it The link to previous element.}
+\end{itemize}
+\subsubsection{Detailed description}
+\state{Structure for doubly type of linked lists.}
+\subsection{Singly struct}
+\subsubsection{Data fields}
+\begin{itemize}
+    \item int data
+    \state{\\\it An integer variable for storage the data in linked list.}
+    \item struct Doubly *next
+    \state{\\\it The link to next element.}
+\end{itemize}
+\subsubsection{Detailed description}
+\state{Structure for singly type of linked lists.}
+
+
+\section{The functions grouped by modules}
+\subsection{Main.c}
+\subsubsection{Data structures}
+\begin{itemize}
+    \item struct Singly
+    \item struct Doubly
+\end{itemize}
+\subsubsection{Functions}
+\paragraph{\bf void doubly\_test ( FILE *f)}
+\subparagraph{Parameters\\}
+\state{\bf *f}{ pointer to the file for output results.}
+\subparagraph{Returns\\}
+\state{The test results.}
+\subparagraph{Description\\}
+\state\hspace*{0,7cm}{length : a variable for length of list, default at 2000 elements.\\}
+\state\hspace*{1cm}{val : a variable to enter values in list.\\}
+\state\hspace*{1cm}{pos : a variable for positions in lists.\\\\
+\state{Create two lists using doubly\_push\_last and doubly\_push\_first functions with length value of "length".\\\\
+Print the initial list and the list after we delete the element.\\
+Print the element from position "pos" (generated with C random function), before and after we delete the element.\\\\
+Add the a new element "val" on position "pos", both generated with C random function.\\
+Print the element from position "pos".\\\\
+Print the length of the list and the list.\\\\
+Append the two list, print the result and lengh of appended lists.}
+
+\paragraph{\bf void singly\_test ( FILE *f)}
+\subparagraph{Parameters\\}
+\state{\bf *f}{ pointer to the file for output results.}
+\subparagraph{Returns\\}
+\state{The test results.}
+\subparagraph{Description\\}
+\state\hspace*{0,7cm}{length : a variable for length of list, default at 2000 elements.\\}
+\state\hspace*{1cm}{val : a variable to enter values in list.\\}
+\state\hspace*{1cm}{pos : a variable for positions in lists.\\\\
+\state{Create two lists using singly\_push\_last and singly\_push\_first functions with length value of "length".\\\\
+Print the initial list and the list after we delete the element.\\
+Print the element from position "pos" (generated with C random function), before and after we delete the element.\\\\
+Add the a new element "val" on position "pos", both generated with C random function.\\
+Print the element from position "pos".\\\\
+Print the length of the list and the list.\\\\
+Append the two list, print the result and lengh of appended lists.}
+
+
+\paragraph{\bf int main ()\\\\}
+\state{Main function.\\\\}
+\state{Function call tests generator for singly and doubly linked lists giving tests with operation imported from "singly\_functions.h" and "doubly\_functions.h".\\\\Opens a text file for writing in appending mode. If it does not exist, then a new file is created. The program will start
+appending content in the existing file content.\\\\Intializes random number generator.\\\\Uses the singly\_test and doubly\_test, tests generator function.
+}
+
+\subsection{Singly\_functions.h}
+\subsubsection{Data structures}
+\begin{itemize}
+    \item typedef struct Singly
+\end{itemize}
+\subsubsection{Functions}
+\paragraph{void singly\_print\_list (Singly *head, FILE *f)\\}
+\state{Print a singly linked list.}
+\paragraph{int singly\_pop\_pos (Singly *head, int pos)\\}
+\state{Return an element from a given position.}
+\paragraph{Singly* singly\_init\_emptylist ()\\}
+\state{Return a pointer of type singly linked list.}
+\paragraph{void singly\_push\_first (Singly *head, int val)\\}
+\state{Add a new element on the first position of list.}
+\paragraph{void singly\_push\_last (Singly *head, int val)\\}
+\state{Add a new element on the last position of list.}
+\paragraph {void singly\_push\_pos (Singly *head, int pos, int val)\\}
+\state{Add a new element on the specified position of list.}
+\paragraph{void singly\_delete\_pos (Singly *head, int pos)\\}
+\state{Delete an element on the specified position of list.}
+\paragraph{int singly\_length\_list (Singly *head)\\}
+\state{Return the length of list.}
+\paragraph{void singly\_append\_lists (Singly *head\_list1, Singly *head\_list2)
+\\}
+\state{Append two singly lists.}
+
+\subsection{Doubly\_functions.h}
+\subsubsection{Data structures}
+\begin{itemize}
+    \item typedef struct Doubly
+\end{itemize}
+\subsubsection{Functions}
+\paragraph{void doubly\_print\_list (Doubly *head, FILE *f)\\}
+\state{Print a doubly linked list.}
+\paragraph{int doubly\_pop\_pos (Doubly *head, int pos)\\}
+\state{Return an element from a given position.}
+\paragraph{Doubly* doubly\_init\_emptylist ()\\}
+\state{Return a pointer of type doubly linked list.}
+\paragraph{void doubly\_push\_first (Doubly *head, int val)\\}
+\state{Add a new element on the first position of list.}
+\paragraph{void doubly\_push\_last (Doubly *head, int val)\\}
+\state{Add a new element on the last position of list.}
+\paragraph {void doubly\_push\_pos (Doubly *head, int pos, int val)\\}
+\state{Add a new element on the specified position of list.}
+\paragraph{void doubly\_delete\_pos (Doubly *head, int pos)\\}
+\state{Delete an element on the specified position of list.}
+\paragraph{int doubly\_length\_list (Doubly *head)\\}
+\state{Return the length of list.}
+\paragraph{void doubly\_append\_lists (Doubly *head\_list1, Doubly *head\_list2)
+\\}
+\state{Append two doubly lists.}
+
+\subsection{Functions.c}
+\subsubsection{Functions}
+
+\paragraph{void singly\_print\_list (Singly *head, FILE *f)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf *f}{ pointer to the file for output results.}
+\subparagraph{Description\\}
+\state{If the list is not empty, create a new node which will go through the list from the beginning.\\\hspace*{0,3cm}Print each element until the list ends.}
+
+\paragraph{int singly\_pop\_pos (Singly *head, int pos)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf pos}{ represent the position from where displays the value.}
+\subparagraph{Returns\\}
+\state{The value of element from position "pos".}
+\subparagraph{Description\\}
+\state{With a "current" node go through the list to position "pos".\\\hspace*{0,3cm}Return the value of "current" node.}
+
+\paragraph{Singly* singly\_init\_emptylist ()\\}
+\subparagraph{Returns\\}
+\state{Return a pointer of type singly linked list.}
+\subparagraph{Description\\}
+\state{Creates and allocates memory for a new node.\\\hspace*{0,3cm}The list will be empty and the node will point to NULL.}
+
+\paragraph{void singly\_push\_first (Singly *head, int val)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf val}{ represent the value that will be added.}
+\subparagraph{Description\\}
+\state{Creates and allocates memory for a new node.\\\hspace*{0,3cm}Gives value to the new node.\\\hspace*{0,3cm}The new node will point to second element and the head of list will point to the new node.}
+
+\paragraph{void singly\_push\_last (Singly *head, int val)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf val}{ represent the value that will be added.}
+\subparagraph{Description\\}
+\state{Creates and allocates memory for a new node.\\\hspace*{0,3cm}Gives value to the new node.\\\hspace*{0,3cm}With a "current" node go through the list until the end.\\\hspace*{0,3cm}The "current" node will point to the new node.\\\hspace*{0,3cm}The new node will point to NULL.}
+
+\paragraph {void singly\_push\_pos (Singly *head, int pos, int val)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf val}{ represent the value that will be added.}\\
+\state\hspace*{0,4cm}{\bf pos}{ represent the position where the value will be added.}
+\subparagraph{Description\\}
+\state{Creates and allocates memory for a new node.\\\hspace*{0,3cm}With a "current" node go through the list to position "pos".\\\hspace*{0,3cm}The new node will point to the "current" next element.\\\hspace*{0,3cm}The "current" node will point to the new node. Gives value to the new node.}
+
+\paragraph{void singly\_delete\_pos (Singly *head, int pos)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf pos}{ represent the position where the value will be deleted.}
+\subparagraph{Description\\}
+\state{Creates and allocates memory for a deleted-node.\\\hspace*{0,3cm}With a "current" node go through the list to position "pos".\\\hspace*{0,3cm}The deleted-node will be "current" next element.\\\hspace*{0,3cm}"Current" node will point to deleted-node next element.\\\hspace*{0,3cm}Free the deleted-node memory.}
+
+\paragraph{int singly\_length\_list (Singly *head)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\subparagraph{Returns\\}
+\state{The length of the linked list.}\\
+\subparagraph{Description\\}
+\state{With a "current" node go through the list until the end.\\\hspace*{0,3cm}Count each element from list and return the number of elements.}
+
+\paragraph{void singly\_append\_lists (Singly *head\_list1, Singly *head\_list2)
+\\}
+\subparagraph{Parameters\\}
+\state{\bf *head\_list1}{ pointer to the first element of the list 1.}\\
+\state\hspace*{0,4cm}{\bf *head\_list2}{ pointer to the first element of the list 2.}\\
+\subparagraph{Description\\}
+\state{With a "current" node go to the end of list.\\\hspace*{0,3cm}The "current" node will point to the first element of second list.}
+
+
+\paragraph{void doubly\_print\_list (Doubly *head, FILE *f)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf *f}{ pointer to the file for output results.}
+\subparagraph{Description\\}
+\state{If the list is not empty, create a new node which will go through the list from the beginning.\\\hspace*{0,3cm}Print each element until the list ends.}
+
+\paragraph{int doubly\_pop\_pos (Doubly *head, int pos)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf pos}{ represent the position from where displays the value.}
+\subparagraph{Returns\\}
+\state{The value of element from position "pos".}
+\subparagraph{Description\\}
+\state{With a "current" node go through the list to position "pos".\\\hspace*{0,3cm}Return the value of "current" node.}
+
+\paragraph{Doubly* doubly\_init\_emptylist ()\\}
+\subparagraph{Returns\\}
+\state{Return a pointer of type doubly linked list.}
+\subparagraph{Description\\}
+\state{Creates and allocates memory for a new node.\\\hspace*{0,3cm}The list will be empty and the node will point to NULL.}
+
+\paragraph{void doubly\_push\_first (Doubly *head, int val)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf val}{ represent the value that will be added.}
+\subparagraph{Description\\}
+\state{Creates and allocates memory for a new node.\\\hspace*{0,3cm}Gives value to the new node.\\\hspace*{0,3cm}The new node will point to second element and to the head of list.\\\hspace*{0,3cm}The head of list will point to the new node.}
+
+\paragraph{void doubly\_push\_last (Doubly *head, int val)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf val}{ represent the value that will be added.}
+\subparagraph{Description\\}
+\state{Creates and allocates memory for a new node.\\\hspace*{0,3cm}Gives value to the new node.\\\hspace*{0,3cm}With a "current" node go through the list until the end.\\\hspace*{0,3cm}The "current" node will point to the new node.\\\hspace*{0,3cm}The new node will point to "current" node and to NULL.}
+
+\paragraph {void doubly\_push\_pos (Doubly *head, int pos, int val)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf val}{ represent the value that will be added.}\\
+\state\hspace*{0,4cm}{\bf pos}{ represent the position where the value will be added.}
+\subparagraph{Description\\}
+\state{Creates and allocates memory for a new node.\\\hspace*{0,3cm}With a "current" node go through the list to position "pos".\\\hspace*{0,3cm}The new node will point to the "current" next element and to "current" node.\\\hspace*{0,3cm}The "current" node will point to the new node. Gives value to the new node.}
+
+\paragraph{void doubly\_delete\_pos (Doubly *head, int pos)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\state\hspace*{0,4cm}{\bf pos}{ represent the position where the value will be deleted.}
+\subparagraph{Description\\}
+\state{Creates and allocates memory for a deleted-node.\\\hspace*{0,3cm}With a "current" node go through the list to position "pos".\\\hspace*{0,3cm}The deleted-node will be "current" next element.\\\hspace*{0,3cm}"Current" node will point to deleted-node next element.\\\hspace*{0,3cm}The element after deleted-node will point to current.\\\hspace*{0,3cm}Free the deleted-node memory.}
+
+\paragraph{int doubly\_length\_list (Doubly *head)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head}{ pointer to the first element of the list.}\\
+\subparagraph{Returns\\}
+\state{The length of the linked list.}\\
+\subparagraph{Description\\}
+\state{With a "current" node go through the list until the end.\\\hspace*{0,3cm}Count each element from list and return the number of elements.}
+
+\paragraph{void doubly\_append\_lists (Doubly *head\_list1, Doubly *head\_list2)\\}
+\subparagraph{Parameters\\}
+\state{\bf *head\_list1}{ pointer to the first element of the list 1.}\\
+\state\hspace*{0,4cm}{\bf *head\_list2}{ pointer to the first element of the list 2.}\\
+\subparagraph{Description\\}
+\state{With a "current" node go to the end of list.\\\hspace*{0,3cm}The "current" node will point to the first element of second list.\\\hspace*{0,3cm}The first element of second list will point to the last element of first list.}

@@ -1,0 +1,242 @@
+\hypertarget{doubly__functions_8h}{}\section{C\+:/\+Users/\+Dori-\/\+P\+C/\+Desktop/\+Linked\+Lists/doubly\+\_\+functions.h File Reference}
+\label{doubly__functions_8h}\index{C\+:/\+Users/\+Dori-\/\+P\+C/\+Desktop/\+Linked\+Lists/doubly\+\_\+functions.\+h@{C\+:/\+Users/\+Dori-\/\+P\+C/\+Desktop/\+Linked\+Lists/doubly\+\_\+functions.\+h}}
+
+
+C library for operations with doubly linked lists.  
+
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_doubly}{Doubly} \hyperlink{doubly__functions_8h_a94514ce47b78db96b9c60f9a5dc45c74}{Doubly}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{doubly__functions_8h_acd4337335bc01a6bd4767ac1c0b166e7}{doubly\+\_\+print\+\_\+list} (\hyperlink{struct_doubly}{Doubly} $\ast$head, F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em Print a doubly linked list. \end{DoxyCompactList}\item 
+int \hyperlink{doubly__functions_8h_a008690b5abb92429d074a4a58ffe0ae9}{doubly\+\_\+pop\+\_\+pos} (\hyperlink{struct_doubly}{Doubly} $\ast$head, int pos)
+\begin{DoxyCompactList}\small\item\em Return an element from a given position. \end{DoxyCompactList}\item 
+\hyperlink{struct_doubly}{Doubly} $\ast$ \hyperlink{doubly__functions_8h_a4cea829d66ebf087a3c7b8683ad68f4d}{doubly\+\_\+init\+\_\+emptylist} ()
+\begin{DoxyCompactList}\small\item\em Return a pointer of type doubly linked list. \end{DoxyCompactList}\item 
+void \hyperlink{doubly__functions_8h_aa6c475c5bab5cdd460eb1a15ed50f69c}{doubly\+\_\+push\+\_\+first} (\hyperlink{struct_doubly}{Doubly} $\ast$head, int val)
+\begin{DoxyCompactList}\small\item\em Add a new element on the first position of list. \end{DoxyCompactList}\item 
+void \hyperlink{doubly__functions_8h_acc408411c18b2ddf04183b6da629d337}{doubly\+\_\+push\+\_\+last} (\hyperlink{struct_doubly}{Doubly} $\ast$head, int val)
+\begin{DoxyCompactList}\small\item\em Add a new element on the last position of list. \end{DoxyCompactList}\item 
+void \hyperlink{doubly__functions_8h_addfda231cf3e145954a2cef5546e0433}{doubly\+\_\+push\+\_\+pos} (\hyperlink{struct_doubly}{Doubly} $\ast$head, int pos, int val)
+\begin{DoxyCompactList}\small\item\em Add a new element on the specified position of list. \end{DoxyCompactList}\item 
+void \hyperlink{doubly__functions_8h_a05db30921e482e48bff78fba450785a1}{doubly\+\_\+delete\+\_\+pos} (\hyperlink{struct_doubly}{Doubly} $\ast$head, int pos)
+\begin{DoxyCompactList}\small\item\em Delete an element on the specified position of list. \end{DoxyCompactList}\item 
+int \hyperlink{doubly__functions_8h_a2730318a2f7b920c9068ebbaf518e1b2}{doubly\+\_\+length\+\_\+list} (\hyperlink{struct_doubly}{Doubly} $\ast$head)
+\begin{DoxyCompactList}\small\item\em Return the length of list. \end{DoxyCompactList}\item 
+void \hyperlink{doubly__functions_8h_a5e6b437ff574d729cd8deb0269a3beb0}{doubly\+\_\+append\+\_\+lists} (\hyperlink{struct_doubly}{Doubly} $\ast$head\+\_\+list1, \hyperlink{struct_doubly}{Doubly} $\ast$head\+\_\+list2)
+\begin{DoxyCompactList}\small\item\em Append two doubly lists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C library for operations with doubly linked lists. 
+
+Implements operations as initialisation of an empty list, adding a value at the beginning and at the end, inserting an item at a specified position, removing an item at a specified position, computing the length of a list and appending two lists for doubly linked lists. 
+
+\subsection{Typedef Documentation}
+\index{doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}!Doubly@{Doubly}}
+\index{Doubly@{Doubly}!doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}}
+\subsubsection[{\texorpdfstring{Doubly}{Doubly}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Doubly} {\bf Doubly}}\hypertarget{doubly__functions_8h_a94514ce47b78db96b9c60f9a5dc45c74}{}\label{doubly__functions_8h_a94514ce47b78db96b9c60f9a5dc45c74}
+
+
+\subsection{Function Documentation}
+\index{doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}!doubly\+\_\+append\+\_\+lists@{doubly\+\_\+append\+\_\+lists}}
+\index{doubly\+\_\+append\+\_\+lists@{doubly\+\_\+append\+\_\+lists}!doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}}
+\subsubsection[{\texorpdfstring{doubly\+\_\+append\+\_\+lists(\+Doubly $\ast$head\+\_\+list1, Doubly $\ast$head\+\_\+list2)}{doubly_append_lists(Doubly *head_list1, Doubly *head_list2)}}]{\setlength{\rightskip}{0pt plus 5cm}void doubly\+\_\+append\+\_\+lists (
+\begin{DoxyParamCaption}
+\item[{{\bf Doubly} $\ast$}]{head\+\_\+list1, }
+\item[{{\bf Doubly} $\ast$}]{head\+\_\+list2}
+\end{DoxyParamCaption}
+)}\hypertarget{doubly__functions_8h_a5e6b437ff574d729cd8deb0269a3beb0}{}\label{doubly__functions_8h_a5e6b437ff574d729cd8deb0269a3beb0}
+
+
+Append two doubly lists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$head\+\_\+list1} & pointer to the first element of the list 1. \\
+\hline
+{\em $\ast$head\+\_\+list2} & pointer to the first element of the list 2. \\
+\hline
+\end{DoxyParams}
+With a \char`\"{}current\char`\"{} node go the end of list.~\newline
+The \char`\"{}current\char`\"{} node will point to the first element of second list.~\newline
+The first element of second list will point to the last element of first list. \index{doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}!doubly\+\_\+delete\+\_\+pos@{doubly\+\_\+delete\+\_\+pos}}
+\index{doubly\+\_\+delete\+\_\+pos@{doubly\+\_\+delete\+\_\+pos}!doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}}
+\subsubsection[{\texorpdfstring{doubly\+\_\+delete\+\_\+pos(\+Doubly $\ast$head, int pos)}{doubly_delete_pos(Doubly *head, int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}void doubly\+\_\+delete\+\_\+pos (
+\begin{DoxyParamCaption}
+\item[{{\bf Doubly} $\ast$}]{head, }
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{doubly__functions_8h_a05db30921e482e48bff78fba450785a1}{}\label{doubly__functions_8h_a05db30921e482e48bff78fba450785a1}
+
+
+Delete an element on the specified position of list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$head} & pointer to the first element of the list. \\
+\hline
+{\em pos} & represent the position where the value will be deleted. \\
+\hline
+\end{DoxyParams}
+Creates and allocates memory for a deleted-\/node.~\newline
+With a \char`\"{}current\char`\"{} node go through the list to position \char`\"{}pos\char`\"{}.~\newline
+The deleted-\/node will be \char`\"{}current\char`\"{} next element.~\newline
+\char`\"{}\+Current\char`\"{} node will point to deleted-\/node next element.~\newline
+The element after deleted-\/node will point to current.~\newline
+Free the deleted-\/node memory. \index{doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}!doubly\+\_\+init\+\_\+emptylist@{doubly\+\_\+init\+\_\+emptylist}}
+\index{doubly\+\_\+init\+\_\+emptylist@{doubly\+\_\+init\+\_\+emptylist}!doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}}
+\subsubsection[{\texorpdfstring{doubly\+\_\+init\+\_\+emptylist()}{doubly_init_emptylist()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Doubly}$\ast$ doubly\+\_\+init\+\_\+emptylist (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{doubly__functions_8h_a4cea829d66ebf087a3c7b8683ad68f4d}{}\label{doubly__functions_8h_a4cea829d66ebf087a3c7b8683ad68f4d}
+
+
+Return a pointer of type doubly linked list. 
+
+\begin{DoxyReturn}{Returns}
+Return a pointer of type doubly linked list. 
+\end{DoxyReturn}
+Creates and allocates memory for a new node.~\newline
+The list will be empty and the node will point to N\+U\+LL. \index{doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}!doubly\+\_\+length\+\_\+list@{doubly\+\_\+length\+\_\+list}}
+\index{doubly\+\_\+length\+\_\+list@{doubly\+\_\+length\+\_\+list}!doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}}
+\subsubsection[{\texorpdfstring{doubly\+\_\+length\+\_\+list(\+Doubly $\ast$head)}{doubly_length_list(Doubly *head)}}]{\setlength{\rightskip}{0pt plus 5cm}int doubly\+\_\+length\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf Doubly} $\ast$}]{head}
+\end{DoxyParamCaption}
+)}\hypertarget{doubly__functions_8h_a2730318a2f7b920c9068ebbaf518e1b2}{}\label{doubly__functions_8h_a2730318a2f7b920c9068ebbaf518e1b2}
+
+
+Return the length of list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$head} & pointer to the first element of the list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the linked list 
+\end{DoxyReturn}
+With a \char`\"{}current\char`\"{} node go through the list until the end.~\newline
+Count each element from list and return the number of elements. \index{doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}!doubly\+\_\+pop\+\_\+pos@{doubly\+\_\+pop\+\_\+pos}}
+\index{doubly\+\_\+pop\+\_\+pos@{doubly\+\_\+pop\+\_\+pos}!doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}}
+\subsubsection[{\texorpdfstring{doubly\+\_\+pop\+\_\+pos(\+Doubly $\ast$head, int pos)}{doubly_pop_pos(Doubly *head, int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}int doubly\+\_\+pop\+\_\+pos (
+\begin{DoxyParamCaption}
+\item[{{\bf Doubly} $\ast$}]{head, }
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{doubly__functions_8h_a008690b5abb92429d074a4a58ffe0ae9}{}\label{doubly__functions_8h_a008690b5abb92429d074a4a58ffe0ae9}
+
+
+Return an element from a given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$head} & pointer to the first element of the list. \\
+\hline
+{\em pos} & represent the position where displays the value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of element from position \char`\"{}pos\char`\"{}. 
+\end{DoxyReturn}
+With a \char`\"{}current\char`\"{} node go through the list to position \char`\"{}pos\char`\"{}.~\newline
+Return the value of \char`\"{}current\char`\"{} node. \index{doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}!doubly\+\_\+print\+\_\+list@{doubly\+\_\+print\+\_\+list}}
+\index{doubly\+\_\+print\+\_\+list@{doubly\+\_\+print\+\_\+list}!doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}}
+\subsubsection[{\texorpdfstring{doubly\+\_\+print\+\_\+list(\+Doubly $\ast$head, F\+I\+L\+E $\ast$f)}{doubly_print_list(Doubly *head, FILE *f)}}]{\setlength{\rightskip}{0pt plus 5cm}void doubly\+\_\+print\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf Doubly} $\ast$}]{head, }
+\item[{F\+I\+LE $\ast$}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{doubly__functions_8h_acd4337335bc01a6bd4767ac1c0b166e7}{}\label{doubly__functions_8h_acd4337335bc01a6bd4767ac1c0b166e7}
+
+
+Print a doubly linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$head} & pointer to the first element of the list. \\
+\hline
+{\em $\ast$f} & pointer to the file for output results. \\
+\hline
+\end{DoxyParams}
+If the list is not empty, create a new node which will go through the list from the beginning.~\newline
+Print each element until the list ends. \index{doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}!doubly\+\_\+push\+\_\+first@{doubly\+\_\+push\+\_\+first}}
+\index{doubly\+\_\+push\+\_\+first@{doubly\+\_\+push\+\_\+first}!doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}}
+\subsubsection[{\texorpdfstring{doubly\+\_\+push\+\_\+first(\+Doubly $\ast$head, int val)}{doubly_push_first(Doubly *head, int val)}}]{\setlength{\rightskip}{0pt plus 5cm}void doubly\+\_\+push\+\_\+first (
+\begin{DoxyParamCaption}
+\item[{{\bf Doubly} $\ast$}]{head, }
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{doubly__functions_8h_aa6c475c5bab5cdd460eb1a15ed50f69c}{}\label{doubly__functions_8h_aa6c475c5bab5cdd460eb1a15ed50f69c}
+
+
+Add a new element on the first position of list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$head} & pointer to the first element of the list. \\
+\hline
+{\em val} & represent the value that will be added. \\
+\hline
+\end{DoxyParams}
+Creates and allocates memory for a new node.~\newline
+Gives value to the new node.~\newline
+The new node will point to second element and to the head of list.~\newline
+The head of list will point to the new node. \index{doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}!doubly\+\_\+push\+\_\+last@{doubly\+\_\+push\+\_\+last}}
+\index{doubly\+\_\+push\+\_\+last@{doubly\+\_\+push\+\_\+last}!doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}}
+\subsubsection[{\texorpdfstring{doubly\+\_\+push\+\_\+last(\+Doubly $\ast$head, int val)}{doubly_push_last(Doubly *head, int val)}}]{\setlength{\rightskip}{0pt plus 5cm}void doubly\+\_\+push\+\_\+last (
+\begin{DoxyParamCaption}
+\item[{{\bf Doubly} $\ast$}]{head, }
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{doubly__functions_8h_acc408411c18b2ddf04183b6da629d337}{}\label{doubly__functions_8h_acc408411c18b2ddf04183b6da629d337}
+
+
+Add a new element on the last position of list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$head} & pointer to the first element of the list. \\
+\hline
+{\em val} & represent the value that will be added. \\
+\hline
+\end{DoxyParams}
+Creates and allocates memory for a new node.~\newline
+Gives value to the new node.~\newline
+With a \char`\"{}current\char`\"{} node go through the list until the end.~\newline
+The \char`\"{}current\char`\"{} node will point to the new node.~\newline
+The new node will point to \char`\"{}current\char`\"{} node and to N\+U\+LL. \index{doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}!doubly\+\_\+push\+\_\+pos@{doubly\+\_\+push\+\_\+pos}}
+\index{doubly\+\_\+push\+\_\+pos@{doubly\+\_\+push\+\_\+pos}!doubly\+\_\+functions.\+h@{doubly\+\_\+functions.\+h}}
+\subsubsection[{\texorpdfstring{doubly\+\_\+push\+\_\+pos(\+Doubly $\ast$head, int pos, int val)}{doubly_push_pos(Doubly *head, int pos, int val)}}]{\setlength{\rightskip}{0pt plus 5cm}void doubly\+\_\+push\+\_\+pos (
+\begin{DoxyParamCaption}
+\item[{{\bf Doubly} $\ast$}]{head, }
+\item[{int}]{pos, }
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{doubly__functions_8h_addfda231cf3e145954a2cef5546e0433}{}\label{doubly__functions_8h_addfda231cf3e145954a2cef5546e0433}
+
+
+Add a new element on the specified position of list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$head} & pointer to the first element of the list. \\
+\hline
+{\em val} & represent the value that will be added. \\
+\hline
+{\em pos} & represent the position where the value will be added. \\
+\hline
+\end{DoxyParams}
+Creates and allocates memory for a new node.~\newline
+With a \char`\"{}current\char`\"{} node go through the list to position \char`\"{}pos\char`\"{}.~\newline
+The new node will point to the \char`\"{}current\char`\"{} next element and to \char`\"{}current\char`\"{} node.~\newline
+The \char`\"{}current\char`\"{} node will point to the new node. Gives value to the new node.~\newline
+ 

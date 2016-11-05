@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1464178585 source:c:\users\dori-pc\desktop\linkedlists\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"singly_functions.h"
+	"doubly_functions.h"
+
+1460565865 c:\users\dori-pc\desktop\linkedlists\functions.h
+
+1464171148 source:c:\users\dori-pc\desktop\linkedlists\functions.c
+	<stdio.h>
+	<stdlib.h>
+	"singly_functions.h"
+	"doubly_functions.h"
+
+1463304283 c:\users\dori-pc\desktop\linkedlists\singly_functions.h
+
+1461925923 c:\users\dori-pc\desktop\linkedlists\doubly_functions.h
+
+1464171148 source:c:\users\dori-pc\desktop\dascalu dorian 10105b\linkedlists_program\functions.c
+	<stdio.h>
+	<stdlib.h>
+	"singly_functions.h"
+	"doubly_functions.h"
+
+1463304283 c:\users\dori-pc\desktop\dascalu dorian 10105b\linkedlists_program\singly_functions.h
+
+1461925923 c:\users\dori-pc\desktop\dascalu dorian 10105b\linkedlists_program\doubly_functions.h
+
+1465125587 source:c:\users\dori-pc\desktop\dascalu dorian 10105b\linkedlists_program\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"singly_functions.h"
+	"doubly_functions.h"
+
