@@ -1,8 +1,9 @@
 
 public class Main {
-	
-	public static Semaphore semaphore = new Semaphore(2);
-	
+
+	static Object cond = new Object();
+	public static Semaphore semaphore = new Semaphore(2, cond);
+
 	public Main() {
 	}
 	public static void main(String[] args) throws InterruptedException {

@@ -12,7 +12,12 @@ public class Usage implements Runnable{
 	{
 		while(true){
 			
-			semaphore.acquire();
+			try {
+				semaphore.acquire();
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 
 			try {
 				Thread.sleep((long)(Math.random() * 7000));

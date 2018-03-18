@@ -4,32 +4,30 @@ public class Semaphore {
 
 	public int maxDimension;
 	LinkedList<Integer> usage = new LinkedList<>();
+	Object cond;
 	
-	public Semaphore(int dimension) {
+	public Semaphore(int dimension, Object cond) {
 		this.maxDimension = dimension;
+		this.cond = cond;
 	}
 
-	public void acquire()
+	public void acquire() throws InterruptedException
 	{
-		boolean semaphoreNotAquired = true;
-		
-		while (semaphoreNotAquired){		
-			
-			synchronized (usage) {
-				if(usage.size() < maxDimension)
+			synchronized (this) {
+				while(usage.size() == maxDimension)
 				{
-					usage.add(1);
-					semaphoreNotAquired = false;
-					System.out.println(">>> Semaphore aquired");
+					wait();
 				}
+				usage.add(1);
 			}
-		}
+			System.out.println(">>> Semaphore aquired, current size : " + usage.size());
 	}
 
 	public void release(){
-		synchronized (usage) {
-			usage.removeFirst();
+		synchronized (this) {
+			usage.remove();
 			System.out.println("Semaphore released");
+			notifyAll();
 		}
 	}
 }
