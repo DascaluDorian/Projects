@@ -1,0 +1,3 @@
+﻿  stdafx.cpp
+  MPI_LAB1.cpp
+MPI_LAB1.cpp(5): fatal error C1083: Cannot open include file: 'mpi.h': No such file or directory

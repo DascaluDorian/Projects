@@ -1,0 +1,4 @@
+﻿  MPI_LAB1.cpp
+c:\users\dori_pc\desktop\faculate\pda\mpi_lab1 - copy\mpi_lab1\mpi_lab1.cpp(58): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\dori_pc\desktop\faculate\pda\mpi_lab1 - copy\mpi_lab1\mpi_lab1.cpp(133): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\dori_pc\desktop\faculate\pda\mpi_lab1 - copy\mpi_lab1\mpi_lab1.cpp(43): error C4700: uninitialized local variable 'rc' used
