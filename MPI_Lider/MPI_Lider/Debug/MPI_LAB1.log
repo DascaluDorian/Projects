@@ -1,0 +1,9 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (MPI_LAB1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  stdafx.cpp
+  MPI_Lider.cpp
+c:\users\dori_pc\desktop\faculate\pda\mpi_lider\mpi_lider\mpi_lider.cpp(56): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\dori_pc\desktop\faculate\pda\mpi_lider\mpi_lider\mpi_lider.cpp(13): warning C4101: 'source': unreferenced local variable
+c:\users\dori_pc\desktop\faculate\pda\mpi_lider\mpi_lider\mpi_lider.cpp(13): warning C4101: 'j': unreferenced local variable
+c:\users\dori_pc\desktop\faculate\pda\mpi_lider\mpi_lider\mpi_lider.cpp(13): warning C4101: 'i': unreferenced local variable
+  MPI_LAB1.vcxproj -> C:\Users\Dori_PC\Desktop\Faculate\PDA\MPI_Lider\MPI_Lider\Debug\MPI_Lider.exe
+  MPI_LAB1.vcxproj -> C:\Users\Dori_PC\Desktop\Faculate\PDA\MPI_Lider\MPI_Lider\Debug\MPI_Lider.pdb (Full PDB)
