@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (MPI_LAB1.vcxproj, MPI_Lider.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  MPI_Sum_V2.cpp
+  MPI_LAB1.vcxproj -> C:\Users\Dori_PC\Desktop\Faculate\PDA\MPI_Sum varianta 2\Debug\MPI_Sum_V2.exe
+  MPI_LAB1.vcxproj -> C:\Users\Dori_PC\Desktop\Faculate\PDA\MPI_Sum varianta 2\Debug\MPI_Sum_V2.pdb (Full PDB)
