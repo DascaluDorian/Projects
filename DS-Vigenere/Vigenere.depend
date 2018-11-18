@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1542537610 source:d:\dori\chestii vechi\anul 4 - sem 1\vigenere\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
