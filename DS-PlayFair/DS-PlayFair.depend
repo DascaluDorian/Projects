@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1542538564 source:d:\dori\chestii vechi\anul 4 - sem 1\ds-playfair\main.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+
